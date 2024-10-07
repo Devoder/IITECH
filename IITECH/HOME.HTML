@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - IITECH Tecnologia</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <header>
+        <!-- Logo e Texto à Esquerda -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo IITECH">
+            <div class="text-container">
+                <h1>IITECH</h1>
+                <h2>TECNOLOGIA E INOVAÇÃO</h2>
+            </div>
+        </div>
+
+        <!-- Menu de Navegação à Direita -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li> <!-- Corrigido aqui -->
+                <li><a href="#faqs">FAQs</a></li>
+                <li></li>
+                <li></li>
+                
+            </ul>
+        </nav>
+        
+                
+               
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home-section" id="home">
+        <div class="content">
+            <h1 class="animated-title">Transforme suas Ideias em Realidade</h1>
+            <p class="animated-text">
+                Na <span style="color: #536DFE; font-weight: bold;">IITECH</span>, estamos prontos para resolver seus desafios tecnológicos.
+            </p>
+            <p class="rotating-text"></p> <!-- Frases rotativas -->
+            <a href="contato.html" class="cta-button">Entre em Contato</a>
+        </div>
+    </section>
+    
+    <style>
+    /* Estilos principais */
+    .home-section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #60609E; /* Cor do background da seção */
+        color: white;
+        text-align: center;
+        animation: fadeIn 1.5s ease-in-out; /* Animação de fade-in */
+    }
+    
+    .home-section h1 {
+        font-size: 48px;
+        margin: 0;
+        animation: slideIn 2s ease-out; /* Animação de deslize do título */
+    }
+    
+    .home-section p {
+        font-size: 20px;
+        margin-top: 20px;
+        line-height: 1.6;
+        animation: slideIn 2.5s ease-out; /* Animação de deslize dos parágrafos */
+    }
+    
+    .cta-button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 30px;
+        background-color: #536DFE;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        text-decoration: none;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+        animation: slideIn 3s ease-out; /* Animação de deslize do botão */
+    }
+    
+    .cta-button:hover {
+        background-color: #4054B2; /* Cor ao passar o mouse */
+        transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+    
+    /* Animações definidas */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    
+    /* Rotação das frases */
+    .rotating-text {
+        font-size: 18px;
+        color: white;
+        opacity: 0; /* Começa invisível */
+        transition: opacity 1s ease-in-out; /* Transição suave de visibilidade */
+    }
+    
+    /* Animação contínua no título */
+    .animated-title {
+        font-size: 48px;
+        animation: colorChange 6s ease-in-out infinite; /* Animação de cor contínua */
+    }
+    
+    @keyframes colorChange {
+        0% { color: #536DFE; }
+        50% { color: #FF6363; }
+        100% { color: #536DFE; }
+    }
+    </style>
+    
+    <script>
+    // Lista de frases rotativas
+    const phrases = [
+        "Seja qual for o seu problema, nós temos a solução inovadora que você precisa.",
+        "A inovação está no nosso DNA.",
+        "Transformando ideias em realidade desde o primeiro dia.",
+        "Soluções criativas para um mundo em constante mudança."
+    ];
+    
+    let currentIndex = 0;
+    const rotatingTextElement = document.querySelector('.rotating-text');
+    
+    // Função para trocar frases a cada 3 segundos
+    function rotateText() {
+        rotatingTextElement.textContent = phrases[currentIndex];
+        rotatingTextElement.style.opacity = 1; // Mostra a frase
+        setTimeout(() => {
+            rotatingTextElement.style.opacity = 0; // Esconde a frase
+        }, 2500); // Mantém a frase visível por 2.5 segundos
+    
+        currentIndex = (currentIndex + 1) % phrases.length; // Alterna entre as frases
+    }
+    
+    // Inicia a troca de frases
+    setInterval(rotateText, 5000);
+    
+    // Inicia a primeira frase imediatamente
+    rotateText();
+    </script>
+    
+
+    <!-- Seção Sobre Nós -->
+    <section class="sobre-nos" id="sobre-nos">
+        <h2>Sobre a IITECH</h2>
+        <p>
+            Na IITECH, somos apaixonados por tecnologia e inovação. Nossa missão é fornecer soluções tecnológicas de ponta 
+            que ajudam nossos clientes a transformar suas ideias em realidade. Com uma equipe dedicada de especialistas em 
+            desenvolvimento de software, automação e inteligência artificial, estamos preparados para enfrentar qualquer desafio tecnológico.
+        </p>
+        <div class="features">
+            <div>
+               
+                <h3>Desenvolvimento Sob Medida</h3>
+                <p>Nossos desenvolvedores criam soluções personalizadas para atender às necessidades específicas do seu negócio.</p>
+            </div>
+            <div>
+                
+                <h3>Inovação Constante</h3>
+                <p>Na IITECH, a inovação nunca para. Estamos sempre à frente das últimas tendências tecnológicas.</p>
+            </div>
+            <div>
+                
+                <h3>Suporte Técnico Especializado</h3>
+                <p>Nossa equipe de suporte está sempre pronta para ajudar, garantindo que seus sistemas estejam sempre funcionando.</p>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <h2>Trabalhos Realizados</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="imagem1.png"  >
+               
+            </div>
+            <div class="gallery-item">
+                <img src="imagem2.png" >
+               
+            </div>
+            <div class="gallery-item">
+                <img src="imagem3.png" >
+                
+            </div>
+            <div class="gallery-item">
+                <img src="imagem4.png" >
+                
+            </div>
+        </div>
+        
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+    </section>
+    
+
+    <section class="depoimentos" id="depoimentos">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="depoimentos-grid">
+            <div class="depoimento-card">
+                <p>"A IITECH transformou nossa ideia em uma solução real e funcional. A equipe é incrível!"</p>
+                <h3>- Maria Silva, CEO da TechSolutions</h3>
+            </div>
+            <div class="depoimento-card">
+                <p>"Ótimo suporte e soluções que realmente atendem às nossas necessidades!"</p>
+                <h3>- João Pereira, Gerente de TI na CorpTech</h3>
+            </div>
+            <div class="depoimento-card">
+                <p>"Recomendo a IITECH! Eles são especialistas e sempre prontos para ajudar."</p>
+                <h3>- Ana Costa, Diretora de Inovação na InovaCorp</h3>
+            </div>
+            <div class="depoimento-card">
+                <p>"A qualidade do serviço e o atendimento foram excepcionais. Estamos muito satisfeitos!"</p>
+                <h3>- Carlos Mendes, Fundador da StartupXYZ</h3>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faqs">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-card">
+            <strong>O que é a IITECH?</strong>
+            <div class="faq-answer">
+                <p>A IITECH é uma empresa especializada em soluções tecnológicas que visa otimizar processos e melhorar a eficiência dos negócios.</p>
+            </div>
+        </div>
+        <div class="faq-card">
+            <strong>Como posso entrar em contato?</strong>
+            <div class="faq-answer">
+                <p>Você pode nos contatar pelo telefone (+244) 949-933-515 ou pelo e-mail suporte@iitech.com.br.</p>
+            </div>
+        </div>
+        <div class="faq-card">
+            <strong>Quais serviços vocês oferecem?</strong>
+            <div class="faq-answer">
+                <p>Oferecemos uma variedade de serviços, incluindo desenvolvimento de software, consultoria em TI e suporte técnico.</p>
+            </div>
+        </div>
+        <div class="faq-card">
+            <strong>Como funciona o suporte técnico?</strong>
+            <div class="faq-answer">
+                <p>Nosso suporte técnico está disponível 24/7 para ajudar com qualquer problema que você possa enfrentar.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script>
+        document.querySelectorAll('.faq-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('active'); // Alterna a classe 'active' ao clicar
+                const answer = card.querySelector('.faq-answer');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block'; // Exibe ou oculta a resposta
+            });
+        });
+    </script>
+    
+    <!-- Footer -->
+<footer style="background-color: #f0f4ff; padding: 20px; text-align: center; margin-top: 40px;">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#faqs">FAQs</a>
+            <a href="contato.html">Contato</a>
+        </div>
+        <div class="footer-contact">
+            <p>Telefone: (+244) 949-933-515</p>
+            <p>Email: suporte@iitech.com.br</p>
+        </div>
+    </div>
+    <div class="footer-bottom" style="margin-top: 20px;">
+        <p>&copy; 2024 IITECH Tecnologia. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    
+</body>
+</html>

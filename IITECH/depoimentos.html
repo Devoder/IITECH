@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depoimentos - IITECH Tecnologia</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body {
+            animation: fadeIn 1s ease-in-out;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            background-color: #E8E8F1;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 40px;
+            height: auto;
+            margin-right: 5px;
+        }
+
+        .logo-container .text-container h1 {
+            color: #333;
+            font-size: 22px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .logo-container .text-container h2 {
+            color: #777;
+            font-size: 11px;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #6C63FF;
+        }
+
+        .depoimentos {
+            margin-top: 100px; /* Espaço para compensar o cabeçalho fixo */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .depoimentos h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #536DFE;
+        }
+
+        .depoimento-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .depoimento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .depoimento-card p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .depoimento-card h3 {
+            color: #333;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo IITECH">
+            <div class="text-container">
+                <h1>IITECH</h1>
+                <h2>TECNOLOGIA E INOVAÇÃO</h2>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li> <!-- Link para a página de depoimentos -->
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="depoimentos">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="depoimento-card">
+            <p>"A IITECH transformou nossa ideia em uma solução real e funcional. A equipe é incrível!"</p>
+            <h3>- Maria Silva, CEO da TechSolutions</h3>
+        </div>
+        <div class="depoimento-card">
+            <p>"Ótimo suporte e soluções que realmente atendem às nossas necessidades!"</p>
+            <h3>- João Pereira, Gerente de TI na CorpTech</h3>
+        </div>
+        <div class="depoimento-card">
+            <p>"Recomendo a IITECH! Eles são especialistas e sempre prontos para ajudar."</p>
+            <h3>- Ana Costa, Diretora de Inovação na InovaCorp</h3>
+        </div>
+        <div class="depoimento-card">
+            <p>"A qualidade do serviço e o atendimento foram excepcionais. Estamos muito satisfeitos!"</p>
+            <h3>- Carlos Mendes, Fundador da StartupXYZ</h3>
+        </div>
+    </section>
+
+</body>
+</html>
